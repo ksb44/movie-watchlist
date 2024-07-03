@@ -6,7 +6,7 @@ let isConnected = false;
 module.exports = async () => {
   if (isConnected) return;
 
-  await mongoose.connect('mongodb+srv://12as1913162:12as1913162@cluster0.yjsjhqe.mongodb.net/movie_watchlist', {
+  await mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
