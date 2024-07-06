@@ -7,7 +7,7 @@ body {
   align-items: center;
   color: black;
   background-color: #cddbe9;
-  
+  min-height: 100vh;
 }
 
 .app {
@@ -15,8 +15,9 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 600px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 600px;
+  margin: 20px;
 }
 
 h1 {
@@ -85,7 +86,7 @@ button:hover {
   border-radius: 8px;
   margin-bottom: 10px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  width: 150vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px; 
@@ -94,41 +95,59 @@ button:hover {
 .movie-item h3, .movie-item p, .movie-item button {
   margin: 4px;
   border-radius: 10px;
-
 }
 
-.movie-form{
+.movie-form {
   background-color: white;
   margin: 20px;
-  padding: 40px;
-  width: 60vh;
+  padding: 20px;
+  width: 100%;
+  max-width: 600px;
   border-radius: 10px;
-
 }
-.title{
 
+.title {
   text-align: center;
 }
 
-
-
-.main{
-
+.main {
   text-align: center;
 }
 
-
-
-.add-movie{
-
+.add-movie {
   display: flex;
   justify-content: center;
 }
 
-
-.btn{
-
+.btn {
   display: flex;
   justify-content: center;
 }
 
+@media (max-width: 768px) {
+  .app, .movie-item, .movie-form {
+    width: 90%;
+    max-width: 90%;
+  }
+
+  .movie-form {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app, .movie-item, .movie-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .movie-form {
+    padding: 15px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
