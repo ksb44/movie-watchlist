@@ -137,8 +137,8 @@ button:hover {
 
 @media (max-width: 480px) {
   .app, .movie-item, .movie-form {
-    width: 100%;
-    max-width: 100%;
+    width: 90%;
+    max-width: 90%;
     padding: 10px;
   }
 
